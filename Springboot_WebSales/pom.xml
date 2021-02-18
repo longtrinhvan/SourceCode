@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.laptrinhoop</groupId>
-	<artifactId>Springboot_WebSales</artifactId>
+	<artifactId>spring-boot-websales</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>spring-boot-websales-2020</name>
+	<name>spring-boot-websales</name>
 	<description>Project for Spring Boot Web Sales</description>
 
 	<properties>
@@ -26,6 +26,7 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
+			<version>2.11.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,6 +38,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
+			<version>2.11.3</version>
 		</dependency>
 
 
@@ -44,15 +46,17 @@
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+			<version>${elastic.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-client</artifactId>
+			<version>${elastic.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
-			<version>${elastic.version}</version>
+			<version>${elastic.version}</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 
 		<dependency>
@@ -83,10 +87,13 @@
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.22</version>
 		</dependency>
+
 		<!-- JavaMailSender -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -130,7 +137,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-
 </project>
