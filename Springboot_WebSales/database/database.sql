@@ -57,9 +57,9 @@ INSERT Categories (Id, Name, NameVN) VALUES (1003, N'Mobiles', N'Điện thoại
 INSERT Categories (Id, Name, NameVN) VALUES (1012, N'trinhtuanvuu@gmail.com', N'ddoongf hoof xash');
 
 
-INSERT dbo.Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'trinhtuanvu', N'123', N'Trịnh Tuấn Vũ', N'trinhtuanvuu@gmail.com', N'avata_cv.jpg', 1, 1);
-INSERT dbo.Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'tuanvu', N'123456', N'Trinh Tuan Vu', N'tuanvuplbp@gmail.com', N'avata_cv.jpg', 1, 1);
-INSERT dbo.Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'vuongha', N'123', N'Vương', N'tuanvuplbp@gmail.com', N'user.png', 1, 0);
+INSERT Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'trinhtuanvu', N'123', N'Trịnh Tuấn Vũ', N'trinhtuanvuu@gmail.com', N'avata_cv.jpg', 1, 1);
+INSERT Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'tuanvu', N'123456', N'Trinh Tuan Vu', N'tuanvuplbp@gmail.com', N'avata_cv.jpg', 1, 1);
+INSERT Customers (Id, Password, Fullname, Email, Photo, Activated, Admin) VALUES (N'vuongha', N'123', N'Vương', N'tuanvuplbp@gmail.com', N'user.png', 1, 0);
 
 INSERT OrderDetails (Id, OrderId, ProductId, UnitPrice, Quantity, Discount) VALUES (1, 8, 1016, 17.45, 1, 0);
 INSERT OrderDetails (Id, OrderId, ProductId, UnitPrice, Quantity, Discount)  VALUES (2, 9, 1044, 19.45, 1, 0);
