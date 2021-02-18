@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.springboot.entity.Customer;
-import com.springboot.entity.Order;
-import com.springboot.entity.OrderDetail;
 
 public class OrderModel {
 	private String address;
