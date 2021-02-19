@@ -1,4 +1,4 @@
-package com.springboot.entity;
+package com.springboot.createdatabase;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-DROP DATABASE WEBSALES;
-CREATE DATABASE WEBSALES;
-USE WEBSALES;
+DROP DATABASE websales;
+CREATE DATABASE websales;
+USE websales;
 
 CREATE TABLE Categories(
-	Id int auto_increment  PRIMARY KEY,
+	Id int  PRIMARY KEY,
 	Name nvarchar(50) NOT NULL,
 	NameVN nvarchar(50) NOT NULL
 );
@@ -49,6 +49,8 @@ CREATE TABLE Products(
 	Description nvarchar(2000) NULL,
 	ViewCount int NULL
 );
+ALTER TABLE Products ADD FOREIGN KEY(CategoryId) REFERENCES Categories(Id);
+
 
 INSERT Categories (Id, Name, NameVN) VALUES (1000, N'Watches', N'Đồng hồ đeo tay');
 INSERT Categories (Id, Name, NameVN) VALUES (1001, N'Laptops', N'Máy tính xách tay');
