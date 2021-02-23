@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.dao.IInstructorDAO;
-import com.example.demo.entity.Instructor;
+import com.example.demo.util.Instructor;
 
 @Transactional
 @Repository

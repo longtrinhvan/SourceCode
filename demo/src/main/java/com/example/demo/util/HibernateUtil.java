@@ -8,8 +8,12 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
-import com.example.demo.entity.Course;
-import com.example.demo.entity.Instructor;
+import com.example.demo.entity.Category;
+import com.example.demo.entity.Customer;
+import com.example.demo.entity.Order;
+import com.example.demo.entity.OrderDetail;
+import com.example.demo.entity.Product;
+
 
 /**
  * Java based configuration
@@ -27,7 +31,7 @@ public class HibernateUtil {
 				// Hibernate settings equivalent to hibernate.cfg.xml's properties
 				Properties settings = new Properties();
 				settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/hibernate_db?useSSL=false");
+				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/websales?useSSL=false");
 				settings.put(Environment.USER, "root");
 				settings.put(Environment.PASS, "123456");
 				settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5InnoDBDialect");
@@ -36,11 +40,14 @@ public class HibernateUtil {
 
 				settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-				settings.put(Environment.HBM2DDL_AUTO, "update");
+				settings.put(Environment.HBM2DDL_AUTO, "create-drop");
 
 				configuration.setProperties(settings);
-				configuration.addAnnotatedClass(Instructor.class);
-				configuration.addAnnotatedClass(Course.class);
+				configuration.addAnnotatedClass(Order.class);
+				configuration.addAnnotatedClass(Customer.class);
+				configuration.addAnnotatedClass(Category.class);
+				configuration.addAnnotatedClass(Product.class);
+				configuration.addAnnotatedClass(OrderDetail.class);
 
 				ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 						.applySettings(configuration.getProperties()).build();

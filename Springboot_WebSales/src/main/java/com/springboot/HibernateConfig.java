@@ -35,7 +35,7 @@ public class HibernateConfig {
 	@Autowired
 	public SessionFactory getSessionFactory(DataSource dataSource) throws IOException {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-		factoryBean.setPackagesToScan(new String[] { "com.laptrinhoop.entity" });
+		factoryBean.setPackagesToScan(new String[] { "com.springboot.entity" });
 		factoryBean.setDataSource(dataSource);
 		Properties props = factoryBean.getHibernateProperties();
 		props.put("hibernate.dialect", env.getProperty("hb.dialect"));

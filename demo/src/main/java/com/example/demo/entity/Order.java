@@ -1,8 +1,9 @@
-package com.springboot.entity;
+package com.example.demo.entity;
 
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotEmpty;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -22,17 +22,25 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name = "orders")
 public class Order {
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
 
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "MM/dd/yyyy HH:mm:ss" )
+	@Column(name = "orderDate")
 	Date orderDate = new Date();
 
-	@NotEmpty(message = "Vui lòng nhập địa chỉ")
+	@Column(name = "address")
 	String address;
+	
+	@Column(name = "amount")
 	Double amount;
+	
+	@Column(name = "description")
 	String description;
+	
+	@Column(name = "status")
 	Integer status;
 //	Integer phone;
 	

@@ -47,7 +47,7 @@ public class Consumer {
 		order.setAmount(model.getAmount());
 		order.setDescription(model.getDescription());
 		order.setStatus(model.getStatus());
-		order.setPhone(model.getPhone());
+		//order.setPhone(model.getPhone());
 		return orderDao.create(order);
 	}
 

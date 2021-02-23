@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ import javax.persistence.Table;
 public class Instructor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "first_name")

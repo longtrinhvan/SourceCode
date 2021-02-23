@@ -27,7 +27,7 @@ public class RabbitMqService implements IRabbitmqService {
 		model.setAmount(o.getAmount());
 		model.setCustomer(o.getCustomer());
 		model.setDescription(o.getDescription());
-		model.setPhone(o.getPhone());
+		//model.setPhone(o.getPhone());
 		model.setStatus(1);
 		Collection<Product> items = cart.getItemsCart();
 		List<OrderDetails> s = new ArrayList<OrderDetails>();
