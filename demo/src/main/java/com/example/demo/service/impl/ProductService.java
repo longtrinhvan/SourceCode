@@ -10,7 +10,7 @@ import com.example.demo.entity.Product;
 import com.example.demo.service.IProductService;
 
 @Service
-public class ProductService extends GeneralService<Product, Integer>implements IProductService {
+public class ProductService extends GeneralService<Product, Integer> implements IProductService {
 
 	@Autowired
 	private IProductDAO dao;
@@ -34,7 +34,5 @@ public class ProductService extends GeneralService<Product, Integer>implements I
 	public List<Product> findByIdsInCookie(String ids) {
 		return dao.findByIdsInCookie(ids);
 	}
-
-
 
 }
