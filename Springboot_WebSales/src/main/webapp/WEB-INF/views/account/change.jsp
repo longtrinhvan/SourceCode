@@ -24,10 +24,10 @@
 				<input type="password" name="confirm" value="${param.confirm}" class="form-control">
 			</div>
 		</div>
-		<div class="panel-footer">
-			<button class="btn btn-warning">
-				<span class="glyphicon glyphicon-user"></span> Thay đổi
-			</button>	
-		</div>
+<!-- 		<div class="panel-footer"> -->
+<!-- 			<button class="btn btn-warning"> -->
+<!-- 				<span class="glyphicon glyphicon-user"></span> Thay đổi -->
+<!-- 			</button>	 -->
+<!-- 		</div> -->
 	</div>
 </form>

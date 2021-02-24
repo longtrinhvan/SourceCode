@@ -21,7 +21,7 @@ public class TilesConfig {
 	@Bean("tilesConfigurer")
 	public TilesConfigurer getTilesConfigurer() {
 		TilesConfigurer configurer = new TilesConfigurer();
-		configurer.setDefinitions("/WEB-INF/web.xml","/WEB-INF/admin-web.xml");
+		configurer.setDefinitions("/WEB-INF/web.xml","/WEB-INF/admin-web.xml","/WEB-INF/login-web.xml");
 		return configurer;
 	}
 

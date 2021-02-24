@@ -10,7 +10,13 @@ public class LoginController {
 	@GetMapping("/loginAdmin")
 	public String login(Model model) {
 		
-		return "non-layout/login";
+		return "login/login";
+	}
+	
+	@GetMapping("/loginAdmin1")
+	public String login1(Model model) {
+		
+		return "login/login/login";
 	}
 	
 }
